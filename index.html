@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Special Reveal</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- FIRST PAGE -->
+  <div class="page page1 active">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>We have something<br>special to tell you...</h1>
+      <button id="revealBtn">Reveal</button>
+    </div>
+  </div>
+
+  <!-- SECOND PAGE -->
+  <div class="page page2">
+    <div class="heart-bg"></div>
+    <div class="content">
+      <h1 class="names">Venkatesh ❤️ Praveena</h1>
+      <h2 class="date">APRIL 30, 2026</h2>
+      <p class="subtitle">It’s Our Special Day</p>
+    </div>
+  </div>
+
+<script>
+  const btn = document.getElementById("revealBtn");
+  const page1 = document.querySelector(".page1");
+  const page2 = document.querySelector(".page2");
+
+  btn.addEventListener("click", () => {
+    page1.classList.remove("active");
+    setTimeout(() => {
+      page2.classList.add("active");
+    }, 800);
+  });
+</script>
+
+</body>
+</html>
