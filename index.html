@@ -7,20 +7,20 @@
 </head>
 <body>
 
-  <!-- FIRST PAGE -->
-  <div id="page1" class="page show">
-      <h1>We have something<br>special to tell you...</h1>
-      <button onclick="reveal()">Reveal</button>
+  <!-- PAGE 1 -->
+  <div id="page1" class="page">
+    <h1>We have something<br>special to tell you...</h1>
+    <button id="revealBtn">Reveal</button>
   </div>
 
-  <!-- SECOND PAGE -->
+  <!-- PAGE 2 -->
   <div id="page2" class="page image-page"></div>
 
   <script>
-    function reveal() {
-      document.getElementById("page1").classList.remove("show");
-      document.getElementById("page2").classList.add("show");
-    }
+    document.getElementById("revealBtn").addEventListener("click", function() {
+      document.getElementById("page1").style.display = "none";
+      document.getElementById("page2").style.display = "block";
+    });
   </script>
 
 </body>
