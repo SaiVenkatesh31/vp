@@ -11,24 +11,16 @@ html, body {
 
 /* Common page style */
 .page {
-  position: fixed;
   width: 100%;
   height: 100vh;
+}
+
+/* PAGE 1 */
+#page1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-/* Visible page */
-.show {
-  opacity: 1;
-}
-
-/* First page */
-#page1 {
   background: radial-gradient(circle at center, #0a0f2c 0%, #000 100%);
   color: #e6c79c;
   text-align: center;
@@ -50,7 +42,11 @@ button {
   cursor: pointer;
 }
 
-/* Second page full screen image */
+/* PAGE 2 */
+#page2 {
+  display: none;   /* Important */
+}
+
 .image-page {
   background-image: url("reveal.png");
   background-size: cover;
