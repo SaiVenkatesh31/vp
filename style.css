@@ -9,7 +9,7 @@ body {
   overflow: hidden;
 }
 
-/* Page system */
+/* Page System */
 .page {
   position: absolute;
   width: 100%;
@@ -54,6 +54,7 @@ button {
   background: linear-gradient(135deg, #fff0f5, #f6d6e3, #f2b9ca);
   color: #7a4b2e;
   padding: 20px;
+  position: relative;
 }
 
 .names {
@@ -81,4 +82,23 @@ button {
   font-size: clamp(16px, 4vw, 22px);
   color: #b8894f;
   letter-spacing: 2px;
+}
+
+/* Bottom Logo */
+.bottom-logo {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 120px;
+  max-width: 30vw;
+  opacity: 0.9;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 600px) {
+  .bottom-logo {
+    width: 80px;
+    bottom: 10px;
+    left: 10px;
+  }
 }
