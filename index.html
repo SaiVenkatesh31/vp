@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Special Reveal</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- FIRST PAGE -->
-  <div class="page page1 active" id="page1">
-    <div class="content">
+  <!-- PAGE 1 -->
+  <section id="page1" class="page page1 show">
+    <div class="card">
       <h1>We have something<br>special to tell you...</h1>
-      <button id="revealBtn">Reveal</button>
+      <button id="revealBtn" type="button">Reveal</button>
     </div>
-  </div>
+  </section>
 
-  <!-- SECOND PAGE (IMAGE ONLY) -->
-  <div class="page page2" id="page2"></div>
+  <!-- PAGE 2 (IMAGE FULL SCREEN) -->
+  <section id="page2" class="page page2" aria-hidden="true"></section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+  <script>
+    // Wait until HTML is ready
+    window.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("revealBtn");
+      const page1 = document.getElementById("page1");
+      const page2 = document.getElementById("page2");
 
-  const btn = document.getElementById("revealBtn");
-  const page1 = document.getElementById("page1");
-  const page2 = document.getElementById("page2");
-
-  btn.addEventListener("click", function () {
-    page1.classList.remove("active");
-    page2.classList.add("active");
-  });
-
-});
-</script>
-
+      btn.addEventListener("click", () => {
+        page1.classList.remove("show");
+        page2.classList.add("show");
+        page2.setAttribute("aria-hidden", "false");
+      });
+    });
+  </script>
 </body>
 </html>
