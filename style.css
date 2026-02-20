@@ -14,11 +14,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: opacity 0.8s ease;
+  transition: opacity 1s ease;
   opacity: 0;
 }
 
@@ -29,6 +25,10 @@ body {
 
 /* FIRST PAGE */
 .page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background: radial-gradient(circle at center, #0a0f2c 0%, #000 100%);
   color: #e6c79c;
 }
@@ -51,54 +51,6 @@ button {
 
 /* SECOND PAGE */
 .page2 {
-  background: linear-gradient(135deg, #fff0f5, #f6d6e3, #f2b9ca);
-  color: #7a4b2e;
-  padding: 20px;
-  position: relative;
-}
-
-.names {
-  font-size: clamp(24px, 6vw, 46px);
-  margin-bottom: 20px;
-}
-
-.date {
-  font-size: clamp(28px, 7vw, 52px);
-  letter-spacing: 4px;
-  color: #b8894f;
-  margin-bottom: 20px;
-}
-
-.subtitle {
-  font-size: clamp(16px, 4vw, 22px);
-}
-
-.heart {
-  color: #c94c4c;
-}
-
-.countdown {
-  margin-top: 30px;
-  font-size: clamp(16px, 4vw, 22px);
-  color: #b8894f;
-  letter-spacing: 2px;
-}
-
-/* Bottom Logo */
-.bottom-logo {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  width: 120px;
-  max-width: 30vw;
-  opacity: 0.9;
-}
-
-/* Mobile Adjustment */
-@media (max-width: 600px) {
-  .bottom-logo {
-    width: 80px;
-    bottom: 10px;
-    left: 10px;
-  }
+  background: url("reveal.jpg") no-repeat center center;
+  background-size: cover;
 }
