@@ -5,35 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Special Reveal</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- FIRST PAGE -->
-  <div class="page page1 active" id="page1">
-    <div class="content">
+  <div class="page1" id="page1">
+    <div>
       <h1>We have something<br>special to tell you...</h1>
-      <button id="revealBtn">Reveal</button>
+      <button onclick="showReveal()">Reveal</button>
     </div>
   </div>
 
-  <!-- SECOND PAGE (IMAGE ONLY) -->
-  <div class="page page2" id="page2"></div>
+  <!-- SECOND PAGE -->
+  <div class="page2" id="page2"></div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const btn = document.getElementById("revealBtn");
-  const page1 = document.getElementById("page1");
-  const page2 = document.getElementById("page2");
-
-  btn.addEventListener("click", function () {
-    page1.classList.remove("active");
-    page2.classList.add("active");
-  });
-
-});
-</script>
+  <script>
+    function showReveal() {
+      document.getElementById("page1").style.display = "none";
+      document.getElementById("page2").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
