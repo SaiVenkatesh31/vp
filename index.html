@@ -17,18 +17,8 @@
     </div>
   </div>
 
-  <!-- SECOND PAGE -->
-  <div class="page page2" id="page2">
-    <div class="content">
-      <h1 class="names">Venkatesh <span class="heart">❤</span> Praveena</h1>
-      <h2 class="date">APRIL 30, 2026</h2>
-      <p class="subtitle">It’s Our Special Day</p>
-      <div id="countdown" class="countdown"></div>
-    </div>
-
-    <!-- Bottom Left Logo -->
-    <img src="logo.png" class="bottom-logo" alt="Couple Logo">
-  </div>
+  <!-- SECOND PAGE (IMAGE ONLY) -->
+  <div class="page page2" id="page2"></div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -41,31 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     page1.classList.remove("active");
     page2.classList.add("active");
   });
-
-  // Countdown
-  const targetDate = new Date("April 30, 2026 00:00:00").getTime();
-
-  setInterval(function () {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    if (distance < 0) {
-      document.getElementById("countdown").innerHTML = "❤️ It's Today ❤️";
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("countdown").innerHTML =
-      days + " Days " +
-      hours + " Hours " +
-      minutes + " Minutes " +
-      seconds + " Seconds";
-
-  }, 1000);
 
 });
 </script>
