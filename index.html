@@ -9,14 +9,16 @@
 </head>
 <body>
 
-  <div class="page page1 active">
+  <!-- FIRST PAGE -->
+  <div class="page page1 active" id="page1">
     <div class="content">
       <h1>We have something<br>special to tell you...</h1>
       <button id="revealBtn">Reveal</button>
     </div>
   </div>
 
-  <div class="page page2">
+  <!-- SECOND PAGE -->
+  <div class="page page2" id="page2">
     <div class="content">
       <h1 class="names">Venkatesh <span class="heart">❤</span> Praveena</h1>
       <h2 class="date">APRIL 30, 2026</h2>
@@ -25,15 +27,15 @@
   </div>
 
 <script>
-  const btn = document.getElementById("revealBtn");
-  const page1 = document.querySelector(".page1");
-  const page2 = document.querySelector(".page2");
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("revealBtn");
+    const page1 = document.getElementById("page1");
+    const page2 = document.getElementById("page2");
 
-  btn.addEventListener("click", () => {
-    page1.classList.remove("active");
-    setTimeout(() => {
+    btn.addEventListener("click", function () {
+      page1.classList.remove("active");
       page2.classList.add("active");
-    }, 800);
+    });
   });
 </script>
 
