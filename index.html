@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Special Reveal</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- PAGE 1 -->
-  <div id="page1" class="page">
-    <h1>We have something<br>special to tell you...</h1>
-    <button id="revealBtn">Reveal</button>
+  <!-- FIRST PAGE -->
+  <div class="page page1 active" id="page1">
+    <div>
+      <h1>We have something<br>special to tell you...</h1>
+      <button id="revealBtn">Reveal</button>
+    </div>
   </div>
 
-  <!-- PAGE 2 -->
-  <div id="page2" class="page image-page"></div>
+  <!-- SECOND PAGE (YOUR IMAGE) -->
+  <div class="page page2" id="page2"></div>
 
   <script>
-    document.getElementById("revealBtn").addEventListener("click", function() {
-      document.getElementById("page1").style.display = "none";
-      document.getElementById("page2").style.display = "block";
+    document.getElementById("revealBtn").addEventListener("click", function () {
+      document.getElementById("page1").classList.remove("active");
+      document.getElementById("page2").classList.add("active");
     });
   </script>
 
